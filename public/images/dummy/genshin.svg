@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#1a1a1a" />
+    </linearGradient>
+    <linearGradient id="gem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="url(#bg)" />
+  
+  <g transform="translate(200, 200)" filter="url(#glow)">
+    <!-- 4-point star structure -->
+    <path d="M0 -120 L30 -30 L120 0 L30 30 L0 120 L-30 30 L-120 0 L-30 -30 Z" fill="url(#gem)" />
+    <!-- Inner bright star -->
+    <path d="M0 -90 L20 -20 L90 0 L20 20 L0 90 L-20 20 L-90 0 L-20 -20 Z" fill="#e879f9" opacity="0.8" />
+    <!-- Center white -->
+    <path d="M0 -40 L10 -10 L40 0 L10 10 L0 40 L-10 10 L-40 0 L-10 -10 Z" fill="#ffffff" />
+  </g>
+</svg>

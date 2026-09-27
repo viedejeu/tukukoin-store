@@ -1,0 +1,56 @@
+[
+  {
+    "id": "t1",
+    "name": "Budi Santoso",
+    "game": "Royal Dream",
+    "rating": 5,
+    "message": "Gila, top up jam 3 pagi tetep masuk detik itu juga! TukuKoin emang paling the best kalau urusan kecepatan. Recommended banget pokoknya!",
+    "isApproved": true,
+    "createdAt": "2026-09-10T01:00:00.000Z"
+  },
+  {
+    "id": "t2",
+    "name": "Rizky Firmansyah",
+    "game": "Higgs Domino",
+    "rating": 5,
+    "message": "Harga lebih murah dari lapak sebelah. Awalnya ragu, pas dicoba ternyata beneran aman dan koin langsung nambah. Auto langganan tiap hari di sini.",
+    "isApproved": true,
+    "createdAt": "2026-09-09T18:30:00.000Z"
+  },
+  {
+    "id": "t3",
+    "name": "Agus Prayitno",
+    "game": "Mobile Legends",
+    "rating": 4,
+    "message": "Diamond ML masuk cepet banget. Minusnya cuma satu, webnya kadang suka bikin khilaf pengen top up terus wkwk. Mantap min!",
+    "isApproved": true,
+    "createdAt": "2026-09-08T12:15:00.000Z"
+  },
+  {
+    "id": "t4",
+    "name": "Dinda Permata",
+    "game": "Royal Dream",
+    "rating": 5,
+    "message": "CS nya ramah banget pas ditanya-tanya soal cara bayar pakai QRIS. Prosesnya gak sampai semenit. Makasih TukuKoin!",
+    "isApproved": true,
+    "createdAt": "2026-09-07T09:45:00.000Z"
+  },
+  {
+    "id": "t5",
+    "name": "Kevin Andrean",
+    "game": "PUBG Mobile",
+    "rating": 5,
+    "message": "Udah order yang ke 5 kalinya buat beli UC PUBG. Gak pernah ada masalah sama sekali. Webnya juga responsif abis. Lanjutkan!",
+    "isApproved": true,
+    "createdAt": "2026-09-06T20:20:00.000Z"
+  },
+  {
+    "id": "t6",
+    "name": "Yuda Prasetia",
+    "game": "Free Fire",
+    "rating": 5,
+    "message": "Nyoba top up kecil kecilan dulu, eh taunya ngebut prosesnya. Besok gas top up nominal gede buat borong event. Mantap!",
+    "isApproved": true,
+    "createdAt": "2026-09-05T14:10:00.000Z"
+  }
+]

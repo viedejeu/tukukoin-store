@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#1a1a1a" />
+    </linearGradient>
+    <linearGradient id="phone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5F00" />
+      <stop offset="100%" stop-color="#FF8C00" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="url(#bg)" />
+  
+  <!-- Outer Glow -->
+  <rect x="120" y="60" width="160" height="280" rx="30" fill="none" stroke="#FF5F00" stroke-width="4" filter="url(#glow)" opacity="0.5" />
+  
+  <!-- Phone Body -->
+  <rect x="120" y="60" width="160" height="280" rx="30" fill="#222" stroke="url(#phone)" stroke-width="6" />
+  
+  <!-- Screen -->
+  <rect x="135" y="80" width="130" height="240" rx="10" fill="#111" />
+  
+  <!-- Signal Bars -->
+  <rect x="150" y="270" width="10" height="20" rx="5" fill="#555" />
+  <rect x="170" y="250" width="10" height="40" rx="5" fill="#FF5F00" />
+  <rect x="190" y="230" width="10" height="60" rx="5" fill="#FF5F00" />
+  <rect x="210" y="210" width="10" height="80" rx="5" fill="#FF5F00" />
+  
+  <!-- Lightning -->
+  <path d="M190 100 L160 170 L210 170 L190 230" fill="none" stroke="url(#phone)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+</svg>
