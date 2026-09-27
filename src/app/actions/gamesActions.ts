@@ -15,12 +15,7 @@ export async function getGames(): Promise<Game[]> {
     const db = await getDb();
     if (db) {
       const games = await db.collection('games').find({}).sort({ order: 1, _id: 1 }).toArray();
-      if (games.length > 0) {
-        return games.map(g => {
-          const { _id, ...rest } = g;
-          return { ...rest, id: _id.toString() } as unknown as Game;
-        });
-      }
+      return games.map(g => { const { _id, ...rest } = g; return { ...rest, id: _id.toString() } as unknown as Game; });
     }
 
     try {

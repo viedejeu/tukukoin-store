@@ -17,12 +17,7 @@ export async function getArticles(): Promise<Article[]> {
     const db = await getDb();
     if (db) {
       const articles = await db.collection('articles').find({}).sort({ date: -1 }).toArray();
-      if (articles.length > 0) {
-        return articles.map(a => {
-          const { _id, ...rest } = a;
-          return { ...rest, id: _id.toString() } as unknown as Article;
-        });
-      }
+      return articles.map(a => { const { _id, ...rest } = a; return { ...rest, id: _id.toString() } as unknown as Article; });
     }
 
     try {
