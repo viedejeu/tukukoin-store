@@ -14,7 +14,7 @@ export default function GameCard({ game }: { game: Game }) {
           sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
         />
       </div>
-      <div className="p-2 sm:p-5 flex flex-col flex-grow justify-center">
+      <div className="p-2 sm:p-5 flex flex-col flex-grow justify-end relative z-10">
         <h3 className="font-bold text-foreground text-[0.65rem] sm:text-lg leading-tight sm:leading-snug mb-0.5 sm:mb-1 truncate group-hover:text-gold transition-colors">
           {game.name}
         </h3>
@@ -23,7 +23,7 @@ export default function GameCard({ game }: { game: Game }) {
     </>
   );
 
-  const className = "group block h-full bg-black-light border border-black-border rounded-xl md:rounded-[1.5rem] overflow-hidden transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,95,0,0.15)] flex flex-col";
+  const className = "group block h-full bg-black-light border border-white/5 rounded-xl md:rounded-[1.5rem] overflow-hidden transition-all duration-300 hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] flex flex-col relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black/80 before:z-0";
 
   if (game.externalUrl) {
     return (

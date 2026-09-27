@@ -39,77 +39,66 @@ export default async function Home() {
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full space-y-20 relative z-10">
         
-        {/* 1. Hero Section */}
-        <section className="relative rounded-2xl md:rounded-[2rem] overflow-hidden bg-[#000000] border border-[#222222]">
-          {/* Glow effect */}
-          {/* Ambient glow removed */}
-          {/* Ambient glow removed */}
-          
-          <div className="relative z-10 p-5 sm:p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-            <div className="flex-1 space-y-4 md:space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-xs font-semibold w-fit mx-auto md:mx-0">
-                <Zap className="w-4 h-4" />
-                <span>Proses Instan 5 Detik</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight leading-tight text-center md:text-left text-white drop-shadow-sm">
-                Situs Top Up Game <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#FF8C00]">Murah & Cepat</span>
-                <span className="block text-xl md:text-2xl mt-3 text-gray-300 font-bold tracking-normal">TukuKoin Official Store 24 Jam</span>
-              </h1>
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center md:text-left max-w-xl mx-auto md:mx-0">
-                Layanan top up game online terpercaya 24 jam nonstop. Proses instan dengan pilihan pembayaran terlengkap (e-wallet, transfer bank, & minimarket).
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 md:gap-4 pt-2">
-                <a href="https://tukukoin.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-gold hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,95,0,0.3)]">
-                  Top Up Sekarang
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex-1 w-full max-w-sm md:max-w-xl mx-auto hidden md:block relative group">
-              {config.bannerUrl ? (
-                <div className="relative w-full overflow-hidden rounded-2xl shadow-[0_0_40px_rgba(255,95,0,0.15)] transition-transform duration-500 hover:scale-[1.02] border border-black-border">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img 
-                    src={config.bannerUrl} 
-                    alt={`Promo Top Up Game Termurah ${config.siteName}`} 
-                    className="w-full h-auto object-contain block"
-                  />
-                </div>
-              ) : (
-                <div className="aspect-square bg-gradient-to-tr from-black-border to-black rounded-2xl border border-black-border/50 shadow-2xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/50" />
-                  <ShieldCheck className="w-32 h-32 text-gold/20 absolute -right-10 -bottom-10" />
-                  <div className="relative z-10 text-center space-y-4">
-                    <div className="w-20 h-20 bg-black-light border border-gold/30 rounded-2xl mx-auto flex items-center justify-center shadow-[0_0_30px_rgba(255,95,0,0.2)]">
-                      <span className="text-4xl">T</span>
-                    </div>
-                    <p className="text-white font-bold tracking-widest text-sm uppercase">TukuKoin</p>
-                  </div>
-                </div>
-              )}
-            </div>
+        {/* 1. Hero Section (Centered Panoramic) */}
+      <section className="relative rounded-[2rem] overflow-hidden border border-[#222222] bg-black">
+        {/* Background if banner is present */}
+        {config.bannerUrl && (
+          <div className="absolute inset-0 z-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={config.bannerUrl} alt="Banner" className="w-full h-full object-cover opacity-20 blur-md" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
           </div>
-        </section>
+        )}
+        
+        <div className="relative z-10 p-6 sm:p-10 md:p-16 flex flex-col items-center text-center max-w-5xl mx-auto space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs sm:text-sm font-bold tracking-wider">
+            <Zap className="w-4 h-4" />
+            <span>PROSES INSTAN 5 DETIK</span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white drop-shadow-lg leading-tight">
+            Portal Top Up <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-gold to-yellow-600">Tercepat & Termurah</span>
+          </h1>
+          
+          <p className="text-gray-300 text-sm md:text-lg max-w-2xl font-medium">
+            Layanan top up game online terpercaya 24 jam nonstop. Proses instan dengan pilihan pembayaran terlengkap se-Indonesia.
+          </p>
 
-      {/* Stats Section */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-black-border">
-        <div className="text-center">
-          <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">99<span className="text-gold">%</span></div>
-          <div className="text-[0.65rem] sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Sukses Rate</div>
+          <div className="pt-8 w-full">
+            {config.bannerUrl ? (
+              <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(212,175,55,0.15)] border border-gold/20 transition-transform hover:scale-[1.01] duration-500">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={config.bannerUrl} alt="Promo" className="w-full h-auto object-cover" />
+              </div>
+            ) : (
+              <div className="h-40 bg-black-light border border-black-border rounded-2xl flex items-center justify-center">
+                 <p className="text-gray-500">Banner Promo</p>
+              </div>
+            )}
+          </div>
         </div>
-        <div className="text-center">
-          <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">24<span className="text-gold">/7</span></div>
-          <div className="text-[0.65rem] sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Layanan Aktif</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">5<span className="text-gold">Dtk</span></div>
-          <div className="text-[0.65rem] sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Kecepatan Proses</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">172K<span className="text-gold">+</span></div>
-          <div className="text-[0.65rem] sm:text-sm text-gray-500 uppercase tracking-widest font-semibold">Pelanggan Aktif</div>
+      </section>
+
+      {/* Floating Glassmorphism Stats */}
+      <section className="relative z-20 -mt-8 sm:-mt-12 mx-auto max-w-4xl px-4 sm:px-0">
+        <div className="bg-[#0A0A0A]/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 shadow-2xl">
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-black text-white mb-1">99<span className="text-gold">%</span></div>
+            <div className="text-[0.65rem] sm:text-xs text-gray-400 uppercase tracking-widest font-bold">Sukses Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-black text-white mb-1">24<span className="text-gold">/7</span></div>
+            <div className="text-[0.65rem] sm:text-xs text-gray-400 uppercase tracking-widest font-bold">Layanan Aktif</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-black text-white mb-1">5<span className="text-gold">Dtk</span></div>
+            <div className="text-[0.65rem] sm:text-xs text-gray-400 uppercase tracking-widest font-bold">Proses Kilat</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-black text-white mb-1">172K<span className="text-gold">+</span></div>
+            <div className="text-[0.65rem] sm:text-xs text-gray-400 uppercase tracking-widest font-bold">Pelanggan</div>
+          </div>
         </div>
       </section>
 

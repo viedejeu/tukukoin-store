@@ -36,11 +36,7 @@ export default function CatalogTabs({ games }: { games: Game[] }) {
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm whitespace-nowrap transition-all duration-300 ${
-                isActive 
-                  ? "bg-gold text-black shadow-[0_0_20px_rgba(255,95,0,0.3)] scale-105" 
-                  : "bg-black-light text-gray-400 border border-black-border hover:text-white hover:border-gray-500"
-              }`}
+              className={`flex items-center gap-2 px-4 py-3 font-bold text-sm whitespace-nowrap transition-all duration-300 border-b-2 ${isActive ? "border-gold text-gold" : "border-transparent text-gray-500 hover:text-white hover:border-white/20"}`}
             >
               <Icon className="w-4 h-4" />
               {cat.label}
