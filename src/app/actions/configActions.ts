@@ -3,7 +3,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { revalidatePath } from "next/cache";
-import { getDb, runAutoMigration } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 import configDataFallback from '@/data/db/config.json';
 
 const CONFIG_FILE_PATH = path.join(process.cwd(), "src", "data", "db", "config.json");
@@ -30,8 +30,6 @@ export async function getConfig(): Promise<SiteConfig> {
     const db = await getDb();
     if (db) {
       // Auto-migrate if needed when connecting to MongoDB
-      await runAutoMigration();
-      
       const config = await db.collection('config').findOne({});
       if (config) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
